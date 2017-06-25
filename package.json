@@ -1,0 +1,38 @@
+{
+  "name": "olive-web",
+  "version": "1.0.0",
+  "description": "web app",
+  "main": "index.js",
+  "scripts": {
+    "start": "babel-node src/main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "web",
+    "app"
+  ],
+  "author": "wzz",
+  "license": "MIT",
+  "dependencies": {
+    "koa": "^2.2.0",
+    "koa-body": "^2.1.0",
+    "koa-compose": "^4.0.0",
+    "koa-compress": "^2.0.0",
+    "koa-conditional-get": "^2.0.0",
+    "koa-csrf": "^3.0.6",
+    "koa-etag": "^3.0.0",
+    "koa-favicon": "^2.0.0",
+    "koa-logger": "^3.0.0",
+    "koa-mount": "^3.0.0",
+    "koa-router": "^7.2.1",
+    "koa-session": "^5.3.0",
+    "koa-static": "^3.0.0",
+    "koa-views": "^6.0.2",
+    "mongoose": "^4.10.8",
+    "pm2": "^2.5.0",
+    "swig": "^1.4.2"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.5.2"
+  }
+}
