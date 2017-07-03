@@ -1,13 +1,13 @@
-const Koa = require('koa'),
-    path = require('path'),
-    mount = require('koa-mount'),
-    serve = require('koa-static');
-
-let app = new Koa();
+import Koa from 'koa';
+import mount from 'koa-mount';
+import serve from 'koa-static';
+import config from '../../config';
 
 module.exports = function (options = {}) {
-    let prefix = options.prefix || '/static',
-        dir = options.dir || path.resolve('../docs');
+    let app = new Koa(),
+        prefix = config.STATIC_PREFIX,
+        dir = config.STATIC_DIR;
+
     app.use(serve(dir));
 
     return mount(prefix, app);

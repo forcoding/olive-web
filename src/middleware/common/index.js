@@ -1,30 +1,32 @@
-const path = require('path'),
-    compose = require('koa-compose'),
-    compress = require('koa-compress'),
-    favicon = require('koa-favicon'),
-    conditional = require('koa-conditional-get'),
-    etag = require('koa-etag'),
-    logger = require('koa-logger'),
-    router = require('./router'),
-    serve = require('./serve'),
-    error = require('./error'),
-    notFound = require('./404'),
-    view = require('./view');
+import path from 'path';
+import compose from 'koa-compose';
+import compress from 'koa-compress';
+import favicon from 'koa-favicon';
+import conditional from 'koa-conditional-get';
+import etag from 'koa-etag';
+import logger from 'koa-logger';
+import router from './router';
+import serve from './serve';
+import error from './error';
+import notFound from './404';
+import view from './view';
+import config from '../../config';
 
-module.exports = function () {
+export default function () {
     return compose([
         logger(),
         conditional(),
         etag(),
-        async (ctx, next)=>{
+        async (ctx, next) => {
             ctx.compress = true;
-            await compress({threshold: 1024})(ctx, next);
+            await compress({ threshold: 1024 })(ctx, next);
         },
-        favicon(path.resolve('../public/favicon.ico')),
+        favicon(config.FAVICON_FILE),
         view(),
         error(),
+        serve(),
         router(),
-        notFound(),
-        serve()
+        notFound()
+
     ]);
 };

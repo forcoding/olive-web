@@ -8,11 +8,8 @@
     <title>Document</title>
 </head>
 <body>
-    <p>Hello, {{title}}</p>
-    <ul>
-        {% for user in users %}
-        <li>{{user.name}} -- {{user.password}}</li>
-        {% endfor %}
-    </ul>
+<h1>{{post.title}}</h1>
+<p>{{post.createdAt|date('Y-m-d H:i:s')}}</p>
+<p>{{post.content}}</p>
 </body>
 </html>
