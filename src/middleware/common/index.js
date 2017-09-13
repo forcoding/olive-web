@@ -1,10 +1,9 @@
-import path from 'path';
 import compose from 'koa-compose';
 import compress from 'koa-compress';
 import favicon from 'koa-favicon';
 import conditional from 'koa-conditional-get';
 import etag from 'koa-etag';
-import logger from 'koa-logger';
+import morgan from 'koa-morgan';
 import router from './router';
 import serve from './serve';
 import error from './error';
@@ -14,7 +13,8 @@ import config from '../../config';
 
 export default function () {
     return compose([
-        logger(),
+        // morgan('combined'),
+        morgan('dev'),
         conditional(),
         etag(),
         async (ctx, next) => {

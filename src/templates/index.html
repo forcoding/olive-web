@@ -1,18 +1,127 @@
-<!doctype html>
-<html lang="zh">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <p>Hello, {{title}}</p>
-    <ul>
-        {% for user in users %}
-        <li>{{user.name}} -- {{user.password}}</li>
-        {% endfor %}
-    </ul>
-</body>
-</html>
+{% extends "layout/index.html" %}
+
+{% block content %}
+<section class="hero" style="display: none;">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title">我们的产品</h1>
+            <div class="columns">
+                <article class="column">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="http://bulma.io/images/placeholders/1280x960.png" alt="Image">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <p class="subtitle">渠道产品</p>
+                            <p class="content">统一流量入口、店面、多媒体及移动等多种渠道助力您更高效、更便捷地开展业务</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="column">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="http://bulma.io/images/placeholders/1280x960.png" alt="Image">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <p class="subtitle">软件产品</p>
+                            <p class="content">智慧数据、智能平台、办公自动化及风险控制等多种SaaS产品帮助您更轻松、更智能地管理企业</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="column">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="http://bulma.io/images/placeholders/1280x960.png" alt="Image">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <p class="subtitle">平台产品</p>
+                            <p class="content">区块链、平安脑及世界领先的生物认证技术确保您更轻松、更灵活地享受大数据及人工智能时代的科技力量</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="column">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="http://bulma.io/images/placeholders/1280x960.png" alt="Image">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <p class="subtitle">基础架构产品</p>
+                            <p class="content">平安云为您提供全套IaaS服务及金融IT解决方案，更安全、更可靠地推动您的金融业务创新</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="hero">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title">我们的服务</h1>
+            <div class="columns">
+                <article class="column">
+                    <div class="card card-hover">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="/static/images/project-1.jpg" alt="Image">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <p class="subtitle">城市照明规划</p>
+                            <p class="content">在道路桥粱、地标建筑照明设计方面有多年丰富行业经验</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="column">
+                    <div class="card card-hover">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="/static/images/project-2.jpg" alt="Image">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <p class="subtitle">建筑照明设计</p>
+                            <p class="content">酒店、商业综合体、体育馆、别墅、住宅领域有多宗成功案例</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="column">
+                    <div class="card card-hover">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="/static/images/project-3.jpg" alt="Image">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <p class="subtitle">景观照明设计</p>
+                            <p class="content">园林景观、城市广场、滨湖水景、道路桥梁</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="column">
+                    <div class="card card-hover">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="/static/images/project-4.jpg" alt="Image">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <p class="subtitle">照明设计顾问及指导</p>
+                            <p class="content">佳涵达为您提供更用心的照明设计咨询服务和现场指导</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,5 +1,4 @@
-const views = require('koa-views'),
-    path = require('path');
+const views = require('koa-views');
 
 import config from '../../config/index'
 

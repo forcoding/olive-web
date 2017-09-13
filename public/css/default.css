@@ -1,0 +1,28 @@
+.banner {
+    background-image: url("../images/home-banner.jpg");
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-size: cover;
+}
+.business-banner {
+    background-image: url("../images/business-banner.jpg");
+    background-position: bottom right;
+}
+
+.honor-banner {
+    background-image: url("../images/honor-banner.jpg");
+}
+
+.service-banner {
+    background-image: url("../images/service-banner.jpg");
+    background-position: bottom right;
+}
+
+.card-hover:hover {
+    box-shadow: 0 20px 20px 0 rgba(0,0,0,.06);
+    background: #fff;
+    transition: all .2s;
+    -webkit-transition: all .2s;
+    margin-top: -10px;
+}
